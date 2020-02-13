@@ -1,15 +1,19 @@
-conversion = input("Are you encrypting or decrypting?")
-test = input("What's the secret message?")
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
-cipherMessage = ""
-key = int(input("What is they key?"))
-x = 0
-while x < len(test):
-  whereisletter = alphabet.find(test[x])
-  if conversion == "encrypting" or conversion == "Encrypting":
-    newletter = alphabet[(whereisletter + key)%26]
-  else:
-    newletter = alphabet[(whereisletter - key)%26]
-  cipherMessage = cipherMessage + newletter
-  x = x + 1
-print cipherMessage
+text = "special topics"
+strlen = len(text)
+for x in range(strlen-1,-1,-1):
+  print text[x]
+  
+  
+message = ""  
+for x in range(strlen-1,-1,-1):  
+  message = message + text[x]
+print message
+#write a program to ask the user to enter a string
+#reverse the string and display the reverse string
+
+user = input("Enter a string yo:")
+strlen2 = len(user)
+reversed = ""
+for x in range(strlen2-1,-1,-1):  
+  reversed = reversed + user[x]
+print reversed
